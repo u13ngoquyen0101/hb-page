@@ -4,7 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="theme-color" content="#FFE9EF" />
-<title>Có một điều bất ngờ dành cho em 🎁</title>
+<title>Gửi các chị em BVBB 💐 Chúc mừng 20/10</title>
+<meta property="og:title" content="Gửi các chị em BVBB 💐 Chúc mừng 20/10" />
+<meta property="og:description" content="Lời chúc nhỏ từ anh em BVBB nhân ngày Phụ nữ Việt Nam 20/10" />
+<meta property="og:type" content="website" />
+<meta name="description" content="Lời chúc nhỏ từ anh em BVBB nhân ngày Phụ nữ Việt Nam 20/10" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Patrick Hand: font viết tay có hỗ trợ đầy đủ dấu tiếng Việt (ơ, ư, ế, ộ…) -->
@@ -15,47 +19,79 @@
      ============================================================ -->
 <script>
 const CONFIG = {
-  /* ---------- TÊN ----------
-     Để nguyên "em" / "anh" là chạy được luôn, không cần sửa gì.
-     Muốn gọi tên thật thì đổi tenNguoiNhan thành tên bạn gái (vd: "Ngọc"). */
-  tenNguoiNhan: "em",
-  tenNguoiGui:  "Anh",
-
   /* ---------- MÀN 1: MỞ ĐẦU ---------- */
-  man1_tieuDe:  "Gửi [TÊN EM] 💌",
-  man1_moiGoi:  "Có một điều bất ngờ đang chờ em 🎁",
-  man1_phuDe:   "chạm vào đây nè…",
+  man1_tieuDe:  "Gửi các chị em BVBB 💐",
+  man1_moiGoi:  "Nhân ngày 20/10, anh em BVBB có đôi lời gửi tới các chị em Chi nhánh HCM và toàn thể chị em công ty 💌",
+  man1_phuDe:   "chạm vào phong thư nhé…",
 
   /* ---------- MÀN 2: MINI GAME (đi tìm 5 trái tim) ---------- */
-  man2_tieuDe:     "Khoan đã nè!",
-  man2_huongDan:   "Tìm đủ 5 trái tim thì anh mới cho xem 💗",
-  man2_goiY:       "Nhìn kỹ chút xíu nữa nha…",
-  man2_giaiCuu:    "Thôi, mấy bạn tim tự chạy ra cho em nè 😌",
+  man2_tieuDe:     "Khoan đã!",
+  man2_huongDan:   "Tìm đủ 5 trái tim để mở lời chúc nhé 💗",
+  man2_goiY:       "Nhìn kỹ thêm chút nữa nha…",
+  man2_giaiCuu:    "Mấy trái tim tự chạy ra cho các chị em rồi nè 😊",
   man2_loiKhen: [  // hiện lần lượt mỗi khi bắt được 1 trái tim
-    "Được 1 rồi nè!",
-    "Nhanh ghê, còn 3 thôi",
-    "Còn 2 bạn nữa…",
+    "Được 1 rồi!",
+    "Nhanh quá, còn 3 thôi",
+    "Còn 2 trái tim nữa…",
     "Còn đúng 1 trái tim cuối",
-    "Xong rồi! Mở được nè 🥳"
+    "Mở được rồi 🥳"
   ],
-  man2_nutTiepTuc: "Mở khoá 💗",
+  man2_nutTiepTuc: "Mở lời chúc 💐",
 
-  /* ---------- MÀN 3: LÁ THƯ VIẾT TAY ----------
-     Cố tình viết NGẮN — phần tâm tư để dành cho lá thư tay ngoài đời. */
-  man3_tieuDeThu: "Gửi [TÊN EM],",
+  /* ---------- MÀN 3: ẢNH + LỜI CHÚC RIÊNG CHỊ EM HCM ----------
+     Ảnh hiện ra trước, sau đó lời chúc trượt lên và hiện dần từng dòng. */
+  man3_anh:        "images/chi-em-hcm.webp",
+  man3_moTaAnh:    "Các chị em văn phòng BVBB – Chi nhánh HCM",
+  man3_tieuDe:     "Gửi riêng các chị em văn phòng HCM 💐",
+  man3_loiChuc: [
+    "Cảm ơn vì đã luôn chu đáo, tận tâm",
+    "và giữ cho văn phòng mình luôn ấm áp."
+  ],
+  man3_nutTiepTuc: "Còn nữa →",
+
+  /* ---------- MÀN 4: ẢNH + THƯ CHÚC TOÀN THỂ CHỊ EM BVBB ----------
+     Các ảnh lần lượt bay vào xếp chồng, sau đó lá thư hiện ra bên dưới.
+     Ảnh xếp chồng sẽ tự đổi lượt lên trên cùng. */
+  man4_anh: [
+    "images/chi-em-bvbb-1.webp",
+    "images/chi-em-bvbb-2.webp",
+    "images/chi-em-bvbb-3.webp"
+  ],
+  man4_moTaAnh: "Các chị em BVBB",
+  man4_tieuDeThu: "Gửi toàn thể chị em BVBB,",
   // Mỗi dòng trong mảng = 1 dòng chữ hiện ra dần. Nên để dòng ngắn cho đẹp trên điện thoại.
-  man3_noiDungThu: [
-    "Happy birthday 🎂",             // dòng đầu tự động hiện to hơn
-    "Anh không viết dài ở đây đâu,",
-    "để dành trong lá thư tay rồi."
+  man4_noiDungThu: [
+    "Chúc mừng ngày Phụ nữ Việt Nam 20/10 🌸",   // dòng đầu tự động hiện to hơn
+    "Cảm ơn những đóng góp thầm lặng",
+    "trong từng ngày làm việc của công ty.",
+    "Chúc các chị em luôn xinh đẹp, khoẻ mạnh,",
+    "hạnh phúc và thành công."
   ],
-  man3_kyTen: "— [TÊN ANH]",
-  man3_nutTiepTuc: "Đọc tiếp →",
+  man4_kyTen: "— Anh em BVBB",
+  man4_nutTiepTuc: "Còn nữa →",
 
-  /* ---------- MÀN 4: CÚ TWIST ---------- */
-  man4_dan:     "Mà khoan… 👀",
-  man4_tietLo:  "Lá thư đó anh đang cầm trên tay. Ở dưới nhà em. Ngay bây giờ 💌",
-  man4_ketThuc: "Xuống nha, anh đợi 🧸"
+  /* ---------- MÀN 5: GỬI CÁC CHỊ LÃNH ĐẠO ----------
+     Ảnh chân dung tròn bật lên lần lượt theo thứ tự trong mảng. */
+  man5_tieuDe: "Gửi các chị lãnh đạo & Hành chính nhân sự BVBB 💐",
+  man5_lanhDao: [
+    { ten: "Chị Chinh",   anh: "images/lanh-dao-chinh.webp" },
+    { ten: "Chị Hà",      anh: "images/lanh-dao-ha.webp" },
+    { ten: "Chị Hoa",     anh: "images/lanh-dao-hoa.webp" },
+    { ten: "Chị Hương",   anh: "images/lanh-dao-huong.webp" },
+    { ten: "Chị Phương",  anh: "images/lanh-dao-phuong.webp" },
+    { ten: "Chị Vân Anh", anh: "images/lanh-dao-van-anh.webp" }
+  ],
+  man5_loiChuc: [
+    "Cảm ơn các chị đã luôn dẫn dắt,",
+    "đồng hành và truyền cảm hứng.",
+    "Chúc các chị luôn rạng rỡ, hạnh phúc!"
+  ],
+  man5_nutTiepTuc: "Còn nữa →",
+
+  /* ---------- MÀN 6: KẾT ---------- */
+  man6_dan:     "Mà khoan… 👀",
+  man6_tietLo:  "Hôm nay các chị em chỉ cần làm một việc thôi: cười thật tươi và tận hưởng một ngày thật trọn vẹn 💐",
+  man6_ketThuc: "Chúc mừng 20/10! 🌷"
 };
 </script>
 
@@ -197,21 +233,67 @@ button{font-family:inherit;border:none;background:none;color:inherit;cursor:poin
 @keyframes unlockPop{0%{transform:scale(.7)}55%{transform:scale(1.12)}100%{transform:scale(1)}}
 #s2 .btn{margin-bottom:calc(env(safe-area-inset-bottom) + 10px)}
 
-/* ===================== MÀN 3 — LÁ THƯ ===================== */
+/* ===================== MÀN 3 — ẢNH CHỊ EM HCM ===================== */
 #s3{padding-left:16px;padding-right:16px}
+.photo-frame{
+  width:min(100%,420px);background:#fff;padding:10px 10px 4px;border-radius:22px;
+  box-shadow:var(--shadow-card);opacity:0;
+}
+.photo-frame img{
+  display:block;width:100%;aspect-ratio:4/3;max-height:40vh;max-height:40dvh;
+  object-fit:cover;border-radius:14px;
+  filter:blur(10px) brightness(1.35) saturate(.6);
+  transition:filter 1.6s var(--ease) .25s;
+}
+.photo-caption{font-family:"Patrick Hand",cursive;font-size:1.05rem;color:var(--ink-soft);padding:6px 4px 4px}
+.photo-frame.show{animation:photoIn 1.1s var(--spring) forwards}
+.photo-frame.show img{filter:none}
+@keyframes photoIn{
+  0%{opacity:0;transform:translateY(34px) scale(.82) rotate(-5deg)}
+  55%{opacity:1}
+  100%{opacity:1;transform:rotate(-1.5deg)}
+}
+.wish-card{
+  width:min(100%,420px);margin-top:18px;
+  background:linear-gradient(175deg,#FFFDF8,#FFF6EC);
+  border-radius:var(--r-md);box-shadow:var(--shadow-soft);
+  padding:16px 18px 10px;opacity:0;transform:translateY(26px);
+}
+.wish-card.show{opacity:1;transform:none;transition:opacity .6s,transform .8s var(--spring)}
+.hcm-title{font-family:"Patrick Hand",cursive;font-size:1.45rem;text-wrap:balance;font-weight:400;color:var(--pink-400);line-height:1.35;margin-bottom:6px}
+.wish-card .line{margin-bottom:2px}
+
+/* ===================== MÀN 4 — THƯ CHÚC ===================== */
+#s4{padding-left:16px;padding-right:16px}
 /* Bọc ngoài để sticker nằm ngoài vùng cuộn của thiệp, không bị cắt góc */
 .card-wrap{
   position:relative;width:100%;max-width:420px;margin-top:14px;
-  animation:cardIn .8s var(--spring);
+  opacity:0;
 }
+.card-wrap.show{animation:cardIn .8s var(--spring) forwards}
 .card{
   position:relative;width:100%;
   background:linear-gradient(175deg,#FFFDF8,#FFF6EC);
   border-radius:var(--r-lg);
   box-shadow:var(--shadow-card);
   padding:28px 24px 24px;
-  max-height:68vh;max-height:68dvh;overflow-y:auto;
+  max-height:46vh;max-height:46dvh;overflow-y:auto;
   -webkit-overflow-scrolling:touch;
+}
+/* Chồng ảnh phía trên lá thư */
+.photo-stack{position:relative;width:min(76%,320px);height:min(52vw,214px,26dvh);margin-bottom:8px}
+.stack-photo{
+  position:absolute;inset:0;margin:0;background:#fff;padding:7px;border-radius:16px;
+  box-shadow:var(--shadow-card);opacity:0;
+  transform:translateY(60px) scale(.7) rotate(var(--r));
+  transition:opacity .5s,transform .9s var(--spring);
+}
+.stack-photo img{display:block;width:100%;height:100%;object-fit:cover;border-radius:11px}
+.stack-photo.show{opacity:1;transform:translateX(var(--x)) rotate(var(--r))}
+.stack-photo.shuffle{animation:shuffle .8s var(--ease)}
+@keyframes shuffle{
+  0%,100%{transform:translateX(var(--x)) rotate(var(--r))}
+  50%{transform:translateX(calc(var(--x) + 78%)) rotate(14deg)}
 }
 @keyframes cardIn{0%{transform:translateY(40px) scale(.9) rotate(-2deg);opacity:0}100%{transform:none;opacity:1}}
 .card::-webkit-scrollbar{width:0}
@@ -231,7 +313,7 @@ button{font-family:inherit;border:none;background:none;color:inherit;cursor:poin
   margin-bottom:10px;opacity:0;
 }
 /* Dòng đầu tiên của thư = câu chúc chính, hiện to hơn */
-.line:first-child{font-size:1.9rem;color:var(--pink-400);margin-bottom:18px;line-height:1.4}
+.letter-body .line:first-child{font-size:1.9rem;color:var(--pink-400);margin-bottom:18px;line-height:1.4}
 .line.write{animation:fadeLine .5s ease forwards,writeOn var(--dur,1.1s) var(--ease) forwards}
 @keyframes fadeLine{to{opacity:1}}
 @keyframes writeOn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 -6% 0 0)}}
@@ -240,21 +322,38 @@ button{font-family:inherit;border:none;background:none;color:inherit;cursor:poin
   text-align:right;margin-top:12px;opacity:0;transition:opacity .8s;
 }
 .sign.show{opacity:1}
-#s3 .after{margin-top:18px;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .6s,transform .6s var(--spring)}
-#s3 .after.show{opacity:1;transform:none;pointer-events:auto}
+.after{margin-top:18px;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .6s,transform .6s var(--spring)}
+.after.show{opacity:1;transform:none;pointer-events:auto}
 .btn-ghost{
   font-weight:700;font-size:1rem;color:var(--peach-dark);
   background:#fff;border-radius:999px;padding:13px 28px;min-height:48px;
   box-shadow:var(--shadow-soft);
 }
 .btn-ghost:active{transform:scale(.94)}
-#s3 .mascot{width:78px;margin-bottom:6px}
+#s4 .mascot{width:64px;margin-bottom:4px}
+#s4 .after{margin-top:12px}
 
-/* ===================== MÀN 4 — TWIST ===================== */
+/* ===================== MÀN 5 — CÁC CHỊ LÃNH ĐẠO ===================== */
+#s5{padding-left:16px;padding-right:16px}
+.leaders-title{font-size:clamp(1.3rem,5.6vw,1.6rem);font-weight:800;color:#E0567F;line-height:1.3;text-wrap:balance}
+.leaders{display:grid;grid-template-columns:repeat(3,1fr);gap:12px 8px;width:100%;max-width:400px;margin-top:16px}
+.leader{display:flex;flex-direction:column;align-items:center;opacity:0}
+.leader.show{animation:leaderPop .75s var(--spring) forwards}
+@keyframes leaderPop{0%{opacity:0;transform:scale(.3) translateY(24px) rotate(-8deg)}100%{opacity:1;transform:none}}
+.leader .ava{
+  width:min(24vw,100px);aspect-ratio:1;border-radius:50%;padding:3px;
+  background:linear-gradient(150deg,var(--pink-400),var(--peach));box-shadow:var(--shadow-soft);
+}
+.leader img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid #fff}
+.leader .name{margin-top:6px;font-weight:700;font-size:1rem;line-height:1.2}
+#s5 .wish-card{margin-top:16px}
+#s5 .wish-card .line{margin-bottom:0}
+
+/* ===================== MÀN 6 — KẾT ===================== */
 #confetti{position:fixed;inset:0;z-index:2;pointer-events:none}
-#s4{z-index:3}
-#s4 .lead{font-size:1.1rem;font-weight:700;color:var(--ink-soft);opacity:0;transition:opacity .7s}
-#s4 .lead.show{opacity:1}
+#s6{z-index:3}
+#s6 .lead{font-size:1.1rem;font-weight:700;color:var(--ink-soft);opacity:0;transition:opacity .7s}
+#s6 .lead.show{opacity:1}
 .reveal{
   margin-top:14px;font-size:clamp(1.35rem,6.2vw,1.85rem);font-weight:800;line-height:1.42;
   color:#E0567F;max-width:20rem;text-wrap:balance;
@@ -262,11 +361,11 @@ button{font-family:inherit;border:none;background:none;color:inherit;cursor:poin
 }
 .reveal.show{animation:revealPop 1s var(--spring) forwards}
 @keyframes revealPop{0%{opacity:0;transform:scale(.6)}60%{opacity:1;transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
-#s4 .mascot{width:150px;margin-top:22px;opacity:0;transform:translateY(24px)}
-#s4 .mascot.show{opacity:1;transform:none;transition:opacity .7s,transform .9s var(--spring)}
-#s4 .ending{margin-top:16px;font-size:1rem;font-weight:600;color:var(--ink-soft);opacity:0;transition:opacity .9s}
-#s4 .ending.show{opacity:1}
-#s4 .lead,#s4 .reveal,#s4 .ending,#s4 .mascot{position:relative;z-index:2}
+#s6 .mascot{width:150px;margin-top:22px;opacity:0;transform:translateY(24px)}
+#s6 .mascot.show{opacity:1;transform:none;transition:opacity .7s,transform .9s var(--spring)}
+#s6 .ending{margin-top:16px;font-size:1rem;font-weight:600;color:var(--ink-soft);opacity:0;transition:opacity .9s}
+#s6 .ending.show{opacity:1}
+#s6 .lead,#s6 .reveal,#s6 .ending,#s6 .mascot{position:relative;z-index:2}
 .balloon{position:absolute;bottom:-140px;width:44px;z-index:0;animation:rise linear forwards;pointer-events:none}
 @keyframes rise{
   0%{transform:translateY(0) rotate(-4deg);opacity:0}
@@ -297,7 +396,7 @@ button{font-family:inherit;border:none;background:none;color:inherit;cursor:poin
   <!-- ============ MÀN 1 ============ -->
   <section class="screen" id="s1">
     <p class="hello" id="s1Hello"></p>
-    <button class="envelope-wrap" id="envBtn" aria-label="Mở món quà">
+    <button class="envelope-wrap" id="envBtn" aria-label="Mở phong thư">
       <svg class="envelope" viewBox="0 0 240 176" xmlns="http://www.w3.org/2000/svg">
         <rect x="8" y="30" width="224" height="138" rx="26" fill="#FFD9E4"/>
         <rect x="8" y="30" width="224" height="138" rx="26" fill="none" stroke="#F9B9CE" stroke-width="3"/>
@@ -328,10 +427,26 @@ button{font-family:inherit;border:none;background:none;color:inherit;cursor:poin
 
   <!-- ============ MÀN 3 ============ -->
   <section class="screen" id="s3">
-    <div class="card-wrap">
+    <figure class="photo-frame" id="photoFrame">
+      <img id="hcmPhoto" alt="" decoding="async" />
+      <figcaption class="photo-caption" id="hcmCaption"></figcaption>
+    </figure>
+    <div class="wish-card" id="hcmWish">
+      <h2 class="hcm-title" id="hcmTitle"></h2>
+      <div id="hcmLines"></div>
+    </div>
+    <div class="after" id="s3After">
+      <button class="btn-ghost" id="hcmNext"></button>
+    </div>
+  </section>
+
+  <!-- ============ MÀN 4 ============ -->
+  <section class="screen" id="s4">
+    <div class="photo-stack" id="photoStack"></div>
+    <div class="card-wrap" id="cardWrap">
       <span class="sticker s-a">🌸</span>
       <span class="sticker s-b">💗</span>
-      <span class="sticker s-c">🎀</span>
+      <span class="sticker s-c">💐</span>
       <span class="sticker s-d">🌷</span>
       <div class="card" id="card">
         <h2 class="letter-title" id="letterTitle"></h2>
@@ -339,18 +454,30 @@ button{font-family:inherit;border:none;background:none;color:inherit;cursor:poin
         <p class="sign" id="sign"></p>
       </div>
     </div>
-    <div class="after" id="s3After">
+    <div class="after" id="s4After">
       <div class="mascot" id="mascot3"></div>
       <button class="btn-ghost" id="nextBtn"></button>
     </div>
   </section>
 
-  <!-- ============ MÀN 4 ============ -->
-  <section class="screen" id="s4">
-    <p class="lead" id="s4Lead"></p>
-    <p class="reveal" id="s4Reveal"></p>
+  <!-- ============ MÀN 5 ============ -->
+  <section class="screen" id="s5">
+    <h2 class="leaders-title" id="leadersTitle"></h2>
+    <div class="leaders" id="leaders"></div>
+    <div class="wish-card" id="leadersWish">
+      <div id="leadersLines"></div>
+    </div>
+    <div class="after" id="s5After">
+      <button class="btn-ghost" id="leadersNext"></button>
+    </div>
+  </section>
+
+  <!-- ============ MÀN 6 ============ -->
+  <section class="screen" id="s6">
+    <p class="lead" id="s6Lead"></p>
+    <p class="reveal" id="s6Reveal"></p>
     <div class="mascot" id="mascot4"></div>
-    <p class="ending" id="s4End"></p>
+    <p class="ending" id="s6End"></p>
   </section>
 
 </div>
@@ -362,9 +489,6 @@ button{font-family:inherit;border:none;background:none;color:inherit;cursor:poin
 const $ = s => document.querySelector(s);
 const rand = (a,b) => a + Math.random()*(b-a);
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const fill = t => (t||'')
-  .replaceAll('[TÊN EM]', CONFIG.tenNguoiNhan)
-  .replaceAll('[TÊN ANH]', CONFIG.tenNguoiGui);
 
 /* =========================================================
    MASCOT — chú gấu chibi (dùng lại ở nhiều màn)
@@ -406,7 +530,7 @@ function heartSVG(color){
    ========================================================= */
 (function bg(){
   if(reduced) return;
-  const wrap = $('#bgFloat'), emojis = ['💗','🌸','💕','🌷','✨','🎀'];
+  const wrap = $('#bgFloat'), emojis = ['💗','🌸','💐','🌷','✨','🌸'];
   for(let i=0;i<12;i++){
     const s = document.createElement('span');
     s.className = 'float-item';
@@ -444,9 +568,9 @@ function goTo(id, after){
 /* =========================================================
    MÀN 1
    ========================================================= */
-$('#s1Hello').textContent = fill(CONFIG.man1_tieuDe);
-$('#s1Title').textContent = fill(CONFIG.man1_moiGoi);
-$('#s1Tap').textContent = fill(CONFIG.man1_phuDe);
+$('#s1Hello').textContent = CONFIG.man1_tieuDe;
+$('#s1Title').textContent = CONFIG.man1_moiGoi;
+$('#s1Tap').textContent = CONFIG.man1_phuDe;
 
 $('#envBtn').addEventListener('click', () => {
   const env = $('#envBtn');
@@ -462,9 +586,9 @@ const TOTAL_HEARTS = 5;
 const HEART_COLORS = ['#F58BAF','#FF9EB8','#F7A9C4','#EF7FA6','#FFB3C9'];
 let found = 0, hintTimer = null, rescueTimer = null;
 
-$('#s2Title').textContent  = fill(CONFIG.man2_tieuDe);
-$('#s2Guide').textContent  = fill(CONFIG.man2_huongDan);
-$('#unlockBtn').textContent= fill(CONFIG.man2_nutTiepTuc);
+$('#s2Title').textContent  = CONFIG.man2_tieuDe;
+$('#s2Guide').textContent  = CONFIG.man2_huongDan;
+$('#unlockBtn').textContent= CONFIG.man2_nutTiepTuc;
 $('#mascot2').innerHTML    = bearSVG(false);
 
 // progress pips
@@ -512,7 +636,7 @@ function startGame(){
   hintTimer = setTimeout(()=>{
     if(found < TOTAL_HEARTS){
       area.classList.add('hint');
-      showPraise(fill(CONFIG.man2_goiY));
+      showPraise(CONFIG.man2_goiY);
     }
   }, 9000);
 
@@ -526,7 +650,7 @@ function startGame(){
       el.style.left = (16 + i*16) + '%';
       el.style.top  = (36 + (i%2)*11) + '%';
     });
-    showPraise(fill(CONFIG.man2_giaiCuu));
+    showPraise(CONFIG.man2_giaiCuu);
   }, 20000);
 }
 
@@ -544,7 +668,7 @@ function catchHeart(el){
   el.classList.add('caught');
   document.querySelectorAll('.pip')[found].classList.add('on');
   found++;
-  showPraise(fill(CONFIG.man2_loiKhen[found-1] || ''));
+  showPraise(CONFIG.man2_loiKhen[found-1] || '');
   if(found === TOTAL_HEARTS){
     clearTimeout(hintTimer);
     clearTimeout(rescueTimer);
@@ -554,58 +678,163 @@ function catchHeart(el){
   }
 }
 
-$('#unlockBtn').addEventListener('click', ()=>goTo('s3', playLetter), {passive:true});
+$('#unlockBtn').addEventListener('click', ()=>goTo('s3', playHcm), {passive:true});
+
+/* Viết lần lượt từng dòng vào container, trả về thời điểm (ms) dòng cuối viết xong */
+function writeLines(container, texts, scrollEl){
+  container.innerHTML = '';
+  const nodes = texts.map(t=>{
+    const p = document.createElement('p');
+    p.className = 'line';
+    p.textContent = t;
+    container.appendChild(p);
+    return p;
+  });
+  let t = 400;
+  nodes.forEach(n=>{
+    const dur = Math.min(2.2, Math.max(.8, n.textContent.length*0.032));
+    setTimeout(()=>{
+      n.style.setProperty('--dur', dur+'s');
+      n.classList.add('write');
+      scrollEl && scrollEl.scrollTo({top:scrollEl.scrollHeight, behavior:'smooth'});
+    }, t);
+    t += dur*1000*0.72 + 260;
+  });
+  return t;
+}
 
 /* =========================================================
-   MÀN 3 — LÁ THƯ VIẾT TAY
+   MÀN 3 — ẢNH + LỜI CHÚC RIÊNG CHỊ EM HCM
    ========================================================= */
-$('#letterTitle').textContent = fill(CONFIG.man3_tieuDeThu);
-$('#sign').textContent        = fill(CONFIG.man3_kyTen);
-$('#nextBtn').textContent     = fill(CONFIG.man3_nutTiepTuc);
+const hcmPhoto = $('#hcmPhoto');
+hcmPhoto.src = CONFIG.man3_anh;
+hcmPhoto.alt = CONFIG.man3_moTaAnh;
+$('#hcmCaption').textContent = CONFIG.man3_moTaAnh;
+$('#hcmTitle').textContent   = CONFIG.man3_tieuDe;
+$('#hcmNext').textContent    = CONFIG.man3_nutTiepTuc;
+
+let hcmPlayed = false;
+function playHcm(){
+  if(hcmPlayed) return;
+  hcmPlayed = true;
+  const start = ()=>{
+    // 1) Ảnh hiện ra trước (bay lên + rõ dần) kèm một ít confetti
+    $('#photoFrame').classList.add('show');
+    if(!reduced) setTimeout(()=>burst(60,.3), 450);
+    // 2) Sau đó lời chúc trượt lên và hiện dần từng dòng
+    setTimeout(()=>{
+      $('#hcmWish').classList.add('show');
+      const t = writeLines($('#hcmLines'), CONFIG.man3_loiChuc);
+      setTimeout(()=>$('#s3After').classList.add('show'), t + 400);
+    }, 2000);
+  };
+  // Đợi ảnh tải xong rồi mới chạy hiệu ứng (lỗi ảnh thì vẫn chạy tiếp)
+  if(hcmPhoto.complete) start();
+  else { hcmPhoto.onload = start; hcmPhoto.onerror = start; }
+}
+
+$('#hcmNext').addEventListener('click', ()=>goTo('s4', playLetter), {passive:true});
+
+/* =========================================================
+   MÀN 4 — THƯ CHÚC
+   ========================================================= */
+$('#letterTitle').textContent = CONFIG.man4_tieuDeThu;
+$('#sign').textContent        = CONFIG.man4_kyTen;
+$('#nextBtn').textContent     = CONFIG.man4_nutTiepTuc;
 $('#mascot3').innerHTML       = bearSVG(false);
+
+// Dựng chồng ảnh: mỗi ảnh nghiêng một chút, ảnh cuối nằm trên cùng
+const STACK_POSE = [['-8deg','-10px'],['6deg','10px'],['-1.5deg','0px']];
+const stackPhotos = CONFIG.man4_anh.map((src,i)=>{
+  const f = document.createElement('figure');
+  f.className = 'stack-photo';
+  const [r,x] = STACK_POSE[i % STACK_POSE.length];
+  f.style.setProperty('--r', r);
+  f.style.setProperty('--x', x);
+  f.innerHTML = `<img src="${src}" alt="${CONFIG.man4_moTaAnh}" decoding="async">`;
+  $('#photoStack').appendChild(f);
+  return f;
+});
+
+// Đổi lượt: ảnh trên cùng trượt sang bên rồi chui xuống dưới cùng (phần tử cuối của stackOrder = trên cùng)
+const stackOrder = stackPhotos.slice();
+const applyStackZ = ()=>stackOrder.forEach((f,i)=>f.style.zIndex = i+1);
+applyStackZ();
+function shuffleStack(){
+  if(stackOrder.length < 2) return;
+  const top = stackOrder[stackOrder.length-1];
+  top.classList.add('shuffle');
+  setTimeout(()=>{ stackOrder.unshift(stackOrder.pop()); applyStackZ(); }, 400);
+  setTimeout(()=>top.classList.remove('shuffle'), 820);
+}
 
 let letterPlayed = false;
 function playLetter(){
   if(letterPlayed) return;
   letterPlayed = true;
 
-  const body = $('#letterBody'), card = $('#card');
-  body.innerHTML = '';
-  const lines = CONFIG.man3_noiDungThu.map(fill);
-  const nodes = lines.map(t=>{
-    const p = document.createElement('p');
-    p.className = 'line';
-    p.textContent = t;
-    body.appendChild(p);
-    return p;
-  });
+  // 1) Các ảnh lần lượt bay vào
+  stackPhotos.forEach((f,i)=>setTimeout(()=>f.classList.add('show'), 200 + i*650));
+  const photosDone = 200 + stackPhotos.length*650 + 500;
+  if(!reduced) setTimeout(()=>setInterval(shuffleStack, 3200), photosDone + 2500);
 
-  let t = 400;
-  nodes.forEach((n,i)=>{
-    const dur = Math.min(2.2, Math.max(.8, n.textContent.length*0.032));
-    setTimeout(()=>{
-      n.style.setProperty('--dur', dur+'s');
-      n.classList.add('write');
-      card.scrollTo({top:card.scrollHeight, behavior:'smooth'});
-    }, t);
-    t += dur*1000*0.72 + 260;
-  });
-
+  // 2) Sau đó lá thư hiện ra và viết dần từng dòng
   setTimeout(()=>{
-    $('#sign').classList.add('show');
-    card.scrollTo({top:card.scrollHeight, behavior:'smooth'});
-  }, t + 150);
-  setTimeout(()=>$('#s3After').classList.add('show'), t + 700);
+    $('#cardWrap').classList.add('show');
+    const card = $('#card');
+    const t = writeLines($('#letterBody'), CONFIG.man4_noiDungThu, card) + 400;
+    setTimeout(()=>{
+      $('#sign').classList.add('show');
+      card.scrollTo({top:card.scrollHeight, behavior:'smooth'});
+    }, t + 150);
+    setTimeout(()=>$('#s4After').classList.add('show'), t + 700);
+  }, photosDone);
 }
 
-$('#nextBtn').addEventListener('click', ()=>goTo('s4', playFinale), {passive:true});
+$('#nextBtn').addEventListener('click', ()=>goTo('s5', playLeaders), {passive:true});
 
 /* =========================================================
-   MÀN 4 — CONFETTI + BÓNG BAY + TIẾT LỘ
+   MÀN 5 — CÁC CHỊ LÃNH ĐẠO
    ========================================================= */
-$('#s4Lead').textContent   = fill(CONFIG.man4_dan);
-$('#s4Reveal').textContent = fill(CONFIG.man4_tietLo);
-$('#s4End').textContent    = fill(CONFIG.man4_ketThuc);
+$('#leadersTitle').textContent = CONFIG.man5_tieuDe;
+$('#leadersNext').textContent  = CONFIG.man5_nutTiepTuc;
+
+const leaderEls = CONFIG.man5_lanhDao.map(p=>{
+  const d = document.createElement('div');
+  d.className = 'leader';
+  d.innerHTML = `<div class="ava"><img decoding="async"></div><p class="name"></p>`;
+  const img = d.querySelector('img');
+  img.src = p.anh;
+  img.alt = p.ten;
+  d.querySelector('.name').textContent = p.ten;
+  $('#leaders').appendChild(d);
+  return d;
+});
+
+let leadersPlayed = false;
+function playLeaders(){
+  if(leadersPlayed) return;
+  leadersPlayed = true;
+  // 1) Từng ảnh chân dung bật lên
+  leaderEls.forEach((el,i)=>setTimeout(()=>el.classList.add('show'), 300 + i*320));
+  const done = 300 + leaderEls.length*320 + 500;
+  if(!reduced) setTimeout(()=>burst(50,.35), done - 300);
+  // 2) Sau đó lời tri ân hiện dần
+  setTimeout(()=>{
+    $('#leadersWish').classList.add('show');
+    const t = writeLines($('#leadersLines'), CONFIG.man5_loiChuc);
+    setTimeout(()=>$('#s5After').classList.add('show'), t + 400);
+  }, done);
+}
+
+$('#leadersNext').addEventListener('click', ()=>goTo('s6', playFinale), {passive:true});
+
+/* =========================================================
+   MÀN 6 — CONFETTI + BÓNG BAY + LỜI KẾT
+   ========================================================= */
+$('#s6Lead').textContent   = CONFIG.man6_dan;
+$('#s6Reveal').textContent = CONFIG.man6_tietLo;
+$('#s6End').textContent    = CONFIG.man6_ketThuc;
 $('#mascot4').innerHTML    = bearSVG(true);
 
 /* --- confetti tự vẽ bằng canvas, không cần thư viện ngoài --- */
@@ -671,7 +900,7 @@ function balloon(delay){
       <path d="M22 47 l-4 5 h8 z" fill="${c}"/>
       <path d="M22 52 q7 9 0 17" stroke="${c}" stroke-width="1.6" fill="none" opacity=".7"/>
     </svg>`;
-  $('#s4').appendChild(el);
+  $('#s6').appendChild(el);
   setTimeout(()=>el.remove(), (12+delay)*1000);
 }
 
@@ -680,9 +909,9 @@ function playFinale(){
   if(finalePlayed) return;
   finalePlayed = true;
 
-  setTimeout(()=>$('#s4Lead').classList.add('show'), 250);
+  setTimeout(()=>$('#s6Lead').classList.add('show'), 250);
   setTimeout(()=>{
-    $('#s4Reveal').classList.add('show');
+    $('#s6Reveal').classList.add('show');
     if(!reduced){
       burst(90,.55);
       setTimeout(()=>burst(60,.42), 380);
@@ -691,7 +920,7 @@ function playFinale(){
     }
   }, 1250);
   setTimeout(()=>$('#mascot4').classList.add('show'), 2200);
-  setTimeout(()=>$('#s4End').classList.add('show'), 2900);
+  setTimeout(()=>$('#s6End').classList.add('show'), 2900);
   if(!reduced){
     setTimeout(()=>{ burst(45,.5); for(let i=0;i<5;i++) balloon(i*0.8); }, 6500);
   }
